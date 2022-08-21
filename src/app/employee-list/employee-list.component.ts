@@ -45,9 +45,9 @@ export class EmployeeListComponent implements OnInit {
       }
     });
   }
-  startEdit(i: number, id: number, title: string, state: string, url: string, created_at: string, updated_at: string) {
+  startEdit(i: number, id: number, username: string, firstName: string, age: string, lastName: string, password: string) {
     const dialogRef = this.dialogService.open(EditDialogComponent, {
-      data: {id: id, title: title, state: state, url: url, created_at: created_at, updated_at: updated_at}
+      data: { id: id, username: username, lastName: lastName, age: age, firstName: firstName, password: password }
     });
 
     dialogRef.afterClosed().subscribe(result => {
